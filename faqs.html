@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEUTURE ARTS | FAQs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>FEUTURE ARTS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="officers.html">Officers</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
+        <li><a href="faqs.html" class="active">FAQs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="page-title">Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <button class="faq-question">How to contact Feuture Arts? <span class="icon">+</span></button>
+      <div class="faq-answer">
+        <p>You can reach us through our official Facebook page, Instagram, or email us directly at feuturearts@gmail.com.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are you still open for applications? <span class="icon">+</span></button>
+      <div class="faq-answer">
+        <p>Yes, we open applications at the beginning of each term. Please check the Join Us tab to fill out the form.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What do I get for applying in Feuture Arts? <span class="icon">+</span></button>
+      <div class="faq-answer">
+        <p>Members gain access to exclusive workshops, artistic portfolio-building projects, organizational leadership experience, and community networking events.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is each committee for? <span class="icon">+</span></button>
+      <div class="faq-answer">
+        <p>Creatives designs promotional assets, Publicity handles social media management, Media is in charge of photo and video documentation, and Special Events manages logistics for exhibitions and assemblies.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>feuturearts@gmail.com | Feuture Arts - FEU Alabang</p>
+  </footer>
+
+  <!-- Dropdown Accordion JavaScript -->
+  <script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Close all other open items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+/* General Styling */
+:root {
+  --primary-purple: #6B21A8;
+  --dark-purple: #4C1D95;
+  --secondary-orange: #EA580C;
+  --bg-light: #FBF7F4;
+  --card-bg: #EAE5E1;
+  --text-dark: #1F2937;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header & Navigation - Dominant Purple to Soft Orange Accent Gradient */
+header {
+  background: linear-gradient(135deg, #5B21B6 0%, #7E22CE 65%, var(--secondary-orange) 100%);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header h1 {
+  color: var(--white);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+  color: #FDE047;
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  min-height: 70vh;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-purple);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  color: var(--text-dark);
+}
+
+/* Grids & Cards */
+.art-grid, .events-grid, .officers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: var(--card-bg);
+  text-align: center;
+}
+
+.card-purple {
+  background-color: var(--primary-purple);
+  color: var(--white);
+}
+
+.card-orange {
+  background-color: var(--secondary-orange);
+  color: var(--white);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Event Special Layout */
+.hero-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hero-event img {
+  max-width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* About Page */
+.adviser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.adviser-card {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.adviser-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary-purple);
+}
+
+/* Contact Us Page */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+}
+
+/* Join Us Form */
+.form-container {
+  max-width: 550px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #581C87;
+}
+
+/* FAQ Accordion Styling */
+.faq-item {
+  background: var(--white);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: var(--white);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background-color: #F3F4F6;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0 1.5rem;
+  color: #4B5563;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 1.5rem 1.2rem 1.5rem;
+}
+
+.faq-item.active .faq-question .icon {
+  transform: rotate(45deg);
+}
+
+.faq-question .icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+/* Deep Purple Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--dark-purple);
+  color: var(--white);
+  font-weight: 500;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
